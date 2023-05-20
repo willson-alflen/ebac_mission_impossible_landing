@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission: Impossible 7</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <!-- local css -->
+    <link rel="stylesheet" href="./dist/css/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="#" class="logo"
+          ><img src="./src/images/mi_seven_logo.png" alt="movie logo"
+        /></a>
+        <nav class="navbar navbar-expand-xs navbar-transparent bg-transparent">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggle()">Video</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleSynopsis()">
+                  Synopsis
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleForm();">
+                  Become an Insider
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="hero" id="home">
+        <div class="content">
+          <div class="container">
+            <a href="#" id="button_play" class="play" onclick="toggle();"
+              ><i class="fa-regular fa-circle-play"></i>
+              <p>Watch trailer</p>
+            </a>
+          </div>
+          <ul class="sci">
+            <li>
+              <a href="https://www.facebook.com/Paramount" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/paramountpics/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/ParamountPics" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="trailer">
+        <iframe
+          id="movie_trailer"
+          src="https://www.youtube.com/embed/2m1drlOZSDw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <img
+          class="close"
+          onclick="toggle();"
+          src="./src/images/close.png"
+          alt="button close"
+        />
+      </div>
+
+      <div class="synopsis">
+        <figure class="synopsis__banner">
+          <img
+            src="./src/images/mi_banner_synopsis.jpg"
+            alt="mission impossible banner"
+          />
+        </figure>
+
+        <div class="synopsis__text">
+          <p class="title">Executive Producers</p>
+          <p class="text">
+            David Ellison, Dana Goldberg, Don Granger, Tommy Gormley
+          </p>
+          <p class="title">Produced by</p>
+          <p class="text">Tom Cruise, Christopher McQuarrie</p>
+          <p class="title">Based on the Television Series</p>
+          <p class="text">Created by Bruce Geller</p>
+          <p class="title">Written and Directed by</p>
+          <p class="text">Christopher McQuarrie</p>
+          <p class="title">Starring</p>
+          <p class="text">
+            Tom Cruise, Hayley Atwell, Ving Rhames, Simon Pegg, Rebecca
+            Ferguson, Vanessa Kirby, Esai Morales, Pom Klementieff, Mariela
+            Garriga, Henry Czerny, Shea Whigham, Greg Tarzan Davis, Charles
+            Parnell, Frederick Schmidt, Rob Delaney, Cary Elwes, Indira Varma,
+            Mark Gatiss
+          </p>
+          <p class="title__synopsis">Synopsis available soon</p>
+        </div>
+
+        <img
+          class="close"
+          onclick="toggleSynopsis()"
+          src="./src/images/close.png"
+          alt="button close"
+        />
+      </div>
+
+      <div class="form-insider">
+        <form class="form" action="#">
+          <h4 class="form__title">
+            Sign Up for Exclusive Content and Updates About MISSION: IMPOSSIBLE
+            – DEAD RECKONING PART ONE
+          </h4>
+
+          <div class="form-group">
+            <label for="inputEmail">Enter your email address</label>
+            <input
+              type="email"
+              name="email"
+              id="inputEmail"
+              class="form-control"
+              placeholder="youremail@email.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="inputBirthDate">Enter your birth date</label>
+            <input type="date" class="form-control" id="inputBirthDate" />
+          </div>
+
+          <p class="terms">
+            By submitting my email, I agree to receive the Paramount Insider
+            newsletter and updates about MISSION: IMPOSSIBLE – DEAD RECKONING
+            PART ONE, as well as marketing communications, exclusive content,
+            special offers (including partner offers), and other information
+            from Paramount Pictures and the Paramount family of companies. I
+            understand I can unsubscribe at any time.
+          </p>
+
+          <p class="terms">
+            By clicking SUBMIT, you confirm that you have read and agree to our
+            <a
+              target="_blank"
+              href="https://www.viacomcbs.legal/us/en/cbsi/terms-of-use"
+              >Terms of Use</a
+            >
+            and acknowledge our
+            <a target="_blank" href="https://privacy.paramount.com/policy"
+              >Privacy Policy</a
+            >.
+          </p>
+
+          <div class="form-group form__buttons">
+            <button type="submit" class="btn btn-custom" id="btnSubmit">
+              Submit
+            </button>
+            <button type="reset" class="btn btn-custom">Cancel</button>
+          </div>
+        </form>
+
+        <img
+          class="close"
+          onclick="toggleForm()"
+          src="./src/images/close.png"
+          alt="button close"
+        />
+      </div>
+
+      <section class="info">
+        <div class="content-2">
+          <div class="container-2">
+            <a href="#" class="play-2" onclick="toggle();"
+              ><i class="fa-regular fa-circle-play"></i>
+              <p>Watch trailer</p>
+            </a>
+          </div>
+          <ul class="sci-2">
+            <li>
+              <a href="https://www.facebook.com/Paramount" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/paramountpics/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/ParamountPics" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copy">
+          <div class="slide"></div>
+          <div class="copy__text">
+            <h2><span>Get ready</span> for the <span>Ultimate</span> action</h2>
+            <p>
+              Welcome to the ultimate action-packed adventure - Mission
+              Impossible! Get ready to experience non-stop thrills,
+              heart-pumping action, and mind-boggling stunts in the latest
+              installment of the iconic franchise.
+            </p>
+            <p>
+              Tom Cruise returns as the legendary Ethan Hunt, leading his team
+              on a mission that seems impossible. With the fate of the world at
+              stake, they must race against time to stop a sinister organization
+              from unleashing a devastating global threat.
+            </p>
+            <p>
+              Watch as Hunt and his team navigate through dangerous terrain,
+              overcome impossible obstacles, and defy death to complete their
+              mission. From high-speed chases to intense hand-to-hand combat,
+              every scene is a thrilling spectacle that will leave you on the
+              edge of your seat.
+            </p>
+            <p>
+              Directed by the acclaimed filmmaker Christopher McQuarrie and
+              featuring an all-star cast, Mission Impossible is the ultimate
+              cinematic experience. Don't miss out on this epic adventure - book
+              your tickets now and get ready to be blown away!
+            </p>
+          </div>
+        </div>
+
+        <figure>
+          <img
+            src="./src/images/mi_bg.png"
+            alt="mission impossible dead reckoning - part one; only in theatres july 12"
+          />
+        </figure>
+      </section>
+
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://static.lms.ebaconline.com.br/content-files/b4b9cb34-c50e-430f-a2c3-1d97196ee114/original.pdf"
+          target="_blank"
+          >Ebac</a
+        >. Coded by
+        <a href="https://www.linkedin.com/in/willson-alflen/" target="_blank"
+          >Willson Alflen</a
+        >.
+      </div>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- local scripts -->
+    <script src="./dist/js/main.js"></script>
+  </body>
+</html>

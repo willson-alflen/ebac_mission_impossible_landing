@@ -1,0 +1,107 @@
+.form-insider {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .form {
+    max-width: 600px;
+    width: 100%;
+    color: #fff;
+
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 50px;
+    }
+
+    &-group {
+      margin-bottom: 20px;
+    }
+
+    .terms {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.75rem;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .btn-custom {
+        color: #fff;
+        background-color: #ff2500;
+        width: 25%;
+        margin-top: 16px;
+        border-radius: 30px;
+        box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.15s;
+      }
+
+      button[type="submit"] {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-insider {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .form-insider {
+    .form {
+      &__title {
+        font-size: 1.2rem;
+      }
+
+      &-group {
+        label {
+          font-size: 0.9rem;
+        }
+      }
+
+      .terms {
+        font-size: 0.6rem;
+      }
+
+      &__buttons {
+        display: block;
+
+        .btn-custom {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
