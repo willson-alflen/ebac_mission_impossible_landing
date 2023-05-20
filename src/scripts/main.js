@@ -57,3 +57,7 @@ window.addEventListener("scroll", function () {
     btnBackToTop.classList.remove("show");
   }
 });
+
+btnBackToTop.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
