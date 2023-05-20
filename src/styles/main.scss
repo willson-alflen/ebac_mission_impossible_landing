@@ -30,3 +30,29 @@
     color: #fa6b18;
   }
 }
+
+/* btn back to top */
+.btn-back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  i {
+    margin-top: 8px;
+  }
+
+  &.show {
+    display: block;
+    opacity: 0.7;
+  }
+}

@@ -46,3 +46,14 @@ document.querySelectorAll(".navbar-nav .nav-link").forEach(function (item) {
     }
   });
 });
+
+/* button back to top */
+let btnBackToTop = document.getElementById("btnBackToTop");
+
+window.addEventListener("scroll", function () {
+  if (this.window.pageYOffset > 100) {
+    btnBackToTop.classList.add("show");
+  } else {
+    btnBackToTop.classList.remove("show");
+  }
+});
