@@ -1,13 +1,23 @@
-# ebac_mission_impossible_landing
+# Exercício: Landing Page (Missão: Impossível - 7)
 
-***
-In this project, it was necessary to choose any movie and use it as a theme for the creation of a landing page. As you can see below, the movie I chose was "Mission: Impossible 7" 
-and, as inspiration, I used its official page, adding some very interesting elements like a background with a gradient color, a movie banner with an animation continuous, 
-a "back to top" button, a form with a submit button released only when the user fills in the data, javascript to manage the behavior of the page and a responsive layout.
+![missao-impossivel](https://github.com/willson-alflen/ebac_contact_list_react_redux/assets/87523872/1a7918ca-b589-41a4-ab2f-2c574d5d06e0)
 
-<br>
+## Requisitos da atividade
+1) Criar uma landing page usando um filme como tema.
+2) Utilizar a biblioteca `Gulp` para automatizar tarefas (compilar Sass para CSS, minificar as imagens e o código javascript).
+3) Adaptar a página de forma responsiva.
+4) Publicar o projeto na Vercel.
 
-You can check the project running here: https://ebac-mission-impossible.vercel.app/
-***
+## Orientações
+### Para clonar o projeto
+`https://github.com/willson-alflen/ebac_mission_impossible_landing.git` ou <br />
+`git@github.com:willson-alflen/ebac_mission_impossible_landing.git`
 
-![mission_impossible](https://github.com/willson-alflen/ebac_tech_talks/assets/87523872/e0b455c5-d166-4a41-9c60-abf90e746d2c)
+### Para instalar as dependências
+`npm install` ou `yarn install`
+
+### Para executar a aplicação em localhost
+Use a extensão `Live Server` disponível para o Visual Studio Code
+
+### Para visualizar o projeto online
+ [https://ebac-mission-impossible.vercel.app/](https://ebac-mission-impossible.vercel.app/)
